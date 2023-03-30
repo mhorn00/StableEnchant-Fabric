@@ -4,8 +4,8 @@ import xyz.sarcly.stableenchant.enchantment.Enchantment;
 
 public class ProtectionEnchantment extends Enchantment {
 
-	public ProtectionEnchantment(int rarety, EnchantmentType type) {
-		super(rarety, type);
+	public ProtectionEnchantment(int rarety, EnchantmentType[] types) {
+		super(rarety, types);
 	}
 	
 	@Override

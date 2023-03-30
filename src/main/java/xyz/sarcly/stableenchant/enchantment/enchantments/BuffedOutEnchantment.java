@@ -4,8 +4,8 @@ import xyz.sarcly.stableenchant.enchantment.Enchantment;
 
 public class BuffedOutEnchantment extends Enchantment {
 
-	public BuffedOutEnchantment(int rarety, EnchantmentType type) {
-		super(rarety, type);
+	public BuffedOutEnchantment(int rarety, EnchantmentType[] types) {
+		super(rarety, types);
 	}
 	
 	@Override

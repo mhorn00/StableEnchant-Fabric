@@ -4,8 +4,8 @@ import xyz.sarcly.stableenchant.enchantment.Enchantment;
 
 public class FrostWalkerEnchantment extends Enchantment {
 
-	public FrostWalkerEnchantment(int rarety, EnchantmentType type) {
-		super(rarety, type);
+	public FrostWalkerEnchantment(int rarety, EnchantmentType[] types) {
+		super(rarety, types);
 	}
 
 	@Override

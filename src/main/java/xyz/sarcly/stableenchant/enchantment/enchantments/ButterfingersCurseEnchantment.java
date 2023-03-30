@@ -4,8 +4,8 @@ import xyz.sarcly.stableenchant.enchantment.Enchantment;
 
 public class ButterfingersCurseEnchantment extends Enchantment {
 
-	public ButterfingersCurseEnchantment(int rarety, EnchantmentType type) {
-		super(rarety, type);
+	public ButterfingersCurseEnchantment(int rarety, EnchantmentType[] types) {
+		super(rarety, types);
 	}
 	
 	@Override

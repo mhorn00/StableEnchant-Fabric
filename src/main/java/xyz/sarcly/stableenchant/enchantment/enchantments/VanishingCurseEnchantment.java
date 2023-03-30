@@ -4,8 +4,8 @@ import xyz.sarcly.stableenchant.enchantment.Enchantment;
 
 public class VanishingCurseEnchantment extends Enchantment {
 
-	public VanishingCurseEnchantment(int rarety, EnchantmentType type) {
-		super(rarety, type);
+	public VanishingCurseEnchantment(int rarety, EnchantmentType[] types) {
+		super(rarety, types);
 	}
 	
 	public int getMaxLevel() {

@@ -4,8 +4,8 @@ import xyz.sarcly.stableenchant.enchantment.Enchantment;
 
 public class MeleeProtection extends Enchantment {
 
-	public MeleeProtection(int rarety, EnchantmentType type) {
-		super(rarety, type);
+	public MeleeProtection(int rarety, EnchantmentType[] types) {
+		super(rarety, types);
 	}
 	
 	public int getMaxLevel() {

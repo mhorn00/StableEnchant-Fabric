@@ -4,8 +4,8 @@ import xyz.sarcly.stableenchant.enchantment.Enchantment;
 
 public class HastyEnchantment extends Enchantment {
 
-	public HastyEnchantment(int rarety, EnchantmentType type) {
-		super(rarety, type);
+	public HastyEnchantment(int rarety, EnchantmentType[] types) {
+		super(rarety, types);
 	}
 
 	public int getMaxLevel() {

@@ -4,8 +4,8 @@ import xyz.sarcly.stableenchant.enchantment.Enchantment;
 
 public class StoneboundEnchantment extends Enchantment {
 
-	public StoneboundEnchantment(int rarety, EnchantmentType type) {
-		super(rarety, type);
+	public StoneboundEnchantment(int rarety, EnchantmentType[] types) {
+		super(rarety, types);
 	}
 
 	@Override

@@ -4,8 +4,8 @@ import xyz.sarcly.stableenchant.enchantment.Enchantment;
 
 public class FeatherFallingEnchantment extends Enchantment {
 
-	public FeatherFallingEnchantment(int rarety, EnchantmentType type) {
-		super(rarety, type);
+	public FeatherFallingEnchantment(int rarety, EnchantmentType[] types) {
+		super(rarety, types);
 	}
 
 	@Override

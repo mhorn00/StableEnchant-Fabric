@@ -4,8 +4,8 @@ import xyz.sarcly.stableenchant.enchantment.Enchantment;
 
 public class SoulSpeedEnchantment extends Enchantment {
 
-	public SoulSpeedEnchantment(int rarety, EnchantmentType type) {
-		super(rarety, type);
+	public SoulSpeedEnchantment(int rarety, EnchantmentType[] types) {
+		super(rarety, types);
 	}
 	
 	@Override

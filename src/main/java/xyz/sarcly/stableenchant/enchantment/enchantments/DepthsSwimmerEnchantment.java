@@ -4,8 +4,8 @@ import xyz.sarcly.stableenchant.enchantment.Enchantment;
 
 public class DepthsSwimmerEnchantment extends Enchantment {
 
-	public DepthsSwimmerEnchantment(int rarety, EnchantmentType type) {
-		super(rarety, type);
+	public DepthsSwimmerEnchantment(int rarety, EnchantmentType[] types) {
+		super(rarety, types);
 	}
 	
 	@Override

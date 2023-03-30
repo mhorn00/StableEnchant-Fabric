@@ -10,11 +10,6 @@ public abstract class Enchantment {
 		this.rarety = rarety;
 	}
 
-	public Enchantment(int rarety, EnchantmentType type) {
-		this.types = new EnchantmentType[] { type };
-		this.rarety = rarety;
-	}
-
 	public EnchantmentType[] getTypes() {
 		return this.types;
 	}

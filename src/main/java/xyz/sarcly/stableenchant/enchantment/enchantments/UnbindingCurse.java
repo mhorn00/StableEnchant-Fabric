@@ -4,8 +4,8 @@ import xyz.sarcly.stableenchant.enchantment.Enchantment;
 
 public class UnbindingCurse extends Enchantment {
 
-	public UnbindingCurse(int rarety, EnchantmentType type) {
-		super(rarety, type);
+	public UnbindingCurse(int rarety, EnchantmentType[] types) {
+		super(rarety, types);
 	}
 
 	@Override

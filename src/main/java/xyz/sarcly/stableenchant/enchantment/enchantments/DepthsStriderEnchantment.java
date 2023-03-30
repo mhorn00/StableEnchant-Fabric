@@ -4,8 +4,8 @@ import xyz.sarcly.stableenchant.enchantment.Enchantment;
 
 public class DepthsStriderEnchantment extends Enchantment {
 
-	public DepthsStriderEnchantment(int rarety, EnchantmentType type) {
-		super(rarety, type);
+	public DepthsStriderEnchantment(int rarety, EnchantmentType[] types) {
+		super(rarety, types);
 	}
 	
 	public int getMaxLevel() {

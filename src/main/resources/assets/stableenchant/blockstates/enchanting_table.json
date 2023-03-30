@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "stableenchant:block/enchanting_table"
+    }
+  }
+}

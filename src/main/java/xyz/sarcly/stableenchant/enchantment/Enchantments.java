@@ -3,9 +3,12 @@ package xyz.sarcly.stableenchant.enchantment;
 import net.minecraft.util.registry.Registry;
 import xyz.sarcly.stableenchant.StableEnchant;
 import xyz.sarcly.stableenchant.enchantment.Enchantment.EnchantmentType;
+import xyz.sarcly.stableenchant.enchantment.enchantments.AquaAffinityEnchantment;
+import xyz.sarcly.stableenchant.enchantment.enchantments.BindingCurseEnchantment;
 import xyz.sarcly.stableenchant.enchantment.enchantments.BrittleCurseEnchantment;
 import xyz.sarcly.stableenchant.enchantment.enchantments.BuffedOutEnchantment;
 import xyz.sarcly.stableenchant.enchantment.enchantments.ButterfingersCurseEnchantment;
+import xyz.sarcly.stableenchant.enchantment.enchantments.ChannelingEnchantment;
 import xyz.sarcly.stableenchant.enchantment.enchantments.DepthsStriderEnchantment;
 import xyz.sarcly.stableenchant.enchantment.enchantments.DepthsSwimmerEnchantment;
 import xyz.sarcly.stableenchant.enchantment.enchantments.EfficiencyEnchantment;
@@ -27,10 +30,14 @@ import xyz.sarcly.stableenchant.enchantment.enchantments.UnbreakingEnchantment;
 import xyz.sarcly.stableenchant.enchantment.enchantments.VanishingCurseEnchantment;
 
 public class Enchantments {
+	public static final Enchantment AQUA_AFFINITY = Enchantments.register("aqua_affinity", new AquaAffinityEnchantment(0, new EnchantmentType[] {EnchantmentType.HelmetEnchantment}));
+	public static final Enchantment BINDING_CURSE = Enchantments.register("binding_curse", new BindingCurseEnchantment(0, new EnchantmentType[] {EnchantmentType.ArmorEnchantment}));
+	public static final Enchantment CHANNELING = Enchantments.register("channeling", new ChannelingEnchantment(0, new EnchantmentType[] {EnchantmentType.TridentEnchantment}));
+	public static final Enchantment DEPTHS_STRIDER = Enchantments.register("depths_strider", new DepthsStriderEnchantment(0, new EnchantmentType[] {EnchantmentType.BootsEnchantment}));
+	
 	public static final Enchantment BRITTLE_CURSE = Enchantments.register("brittle_curse", new BrittleCurseEnchantment(0, new EnchantmentType[] {EnchantmentType.AllEnchantment}));
 	public static final Enchantment BUFFED_OUT = Enchantments.register("buffed_out", new BuffedOutEnchantment(0, new EnchantmentType[] {EnchantmentType.AllEnchantment}));
 	public static final Enchantment BUTTERFINGERS_CURSE = Enchantments.register("butterfingers_curse", new ButterfingersCurseEnchantment(0, new EnchantmentType[] {EnchantmentType.AllEnchantment}));
-	public static final Enchantment DEPTHS_STRIDER = Enchantments.register("depths_strider", new DepthsStriderEnchantment(0, new EnchantmentType[] {EnchantmentType.AllEnchantment}));
 	public static final Enchantment DEPTHS_SWIMMER = Enchantments.register("depths_swimmer", new DepthsSwimmerEnchantment(0, new EnchantmentType[] {EnchantmentType.AllEnchantment}));
 	public static final Enchantment EFFICIENCY = Enchantments.register("efficiency", new EfficiencyEnchantment(0, new EnchantmentType[] {EnchantmentType.AllEnchantment}));
 	public static final Enchantment FEATHER_FALLER = Enchantments.register("feather_faller", new FeatherFallingEnchantment(0, new EnchantmentType[] {EnchantmentType.AllEnchantment}));

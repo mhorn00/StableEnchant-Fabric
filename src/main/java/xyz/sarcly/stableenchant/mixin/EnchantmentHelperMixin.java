@@ -5,7 +5,10 @@ import java.util.Map;
 import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
+import org.spongepowered.asm.mixin.injection.Redirect;
 
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtList;
 import net.minecraft.util.Identifier;
@@ -34,16 +37,15 @@ public class EnchantmentHelperMixin {
     public static Identifier getIdFromNbt(NbtCompound nbt) {
 		return EnchantmentHelper.getIdFromNbt(nbt);
     }
-//
-//	@Overwrite
-//    public static Identifier getEnchantmentId(Enchantment enchantment) {
-//		return EnchantmentHelper.getEnchantmentId(enchantment);
-//    }
-//
-//	@Overwrite
-//    public static int getLevel(Enchantment enchantment, ItemStack stack) {
-//		return EnchantmentHelper.getLevel(enchantment, stack);
-//    }
+
+	public static Identifier getEnchantmentId(Enchantment enchantment) {
+		return EnchantmentHelper.getEnchantmentId(enchantment);
+    }
+
+	@Overwrite
+    public static int getLevel(Enchantment enchantment, ItemStack stack) {
+		return EnchantmentHelper.getLevel(enchantment, stack);
+    }
 
 //	@Overwrite
 //    public static Map<Enchantment, Integer> get(ItemStack stack) {
@@ -145,10 +147,10 @@ public class EnchantmentHelperMixin {
 //
 //    }
 //
-//	@Overwrite
-//    public static boolean hasAquaAffinity(LivingEntity entity) {
-//
-//    }
+	@Overwrite
+    public static boolean hasAquaAffinity(LivingEntity entity) {
+		return EnchantmentHelper.hasAquaAffinity(entity);
+    }
 //
 //	@Overwrite
 //    public static boolean hasFrostWalker(LivingEntity entity) {
@@ -160,10 +162,10 @@ public class EnchantmentHelperMixin {
 //
 //    }
 //
-//	@Overwrite
-//    public static boolean hasBindingCurse(ItemStack stack) {
-//
-//    }
+	@Overwrite
+    public static boolean hasBindingCurse(ItemStack stack) {
+		return EnchantmentHelper.hasBindingCurse(stack);
+    }
 //
 //	@Overwrite
 //    public static boolean hasVanishingCurse(ItemStack stack) {
@@ -180,10 +182,10 @@ public class EnchantmentHelperMixin {
 //
 //    }
 //
-//	@Overwrite
-//    public static boolean hasChanneling(ItemStack stack) {
-//        
-//    }
+	@Overwrite
+    public static boolean hasChanneling(ItemStack stack) {
+        return EnchantmentHelper.hasChanneling(stack);
+    }
 //
 //	@Overwrite
 //    public static Map.Entry<EquipmentSlot, ItemStack> chooseEquipmentWith(Enchantment enchantment, LivingEntity entity) {

@@ -2,8 +2,8 @@ package xyz.sarcly.stableenchant.enchantment;
 
 public abstract class Enchantment {
 
-	private EnchantmentType[] types;
-	private int rarety;
+	private final EnchantmentType[] types;
+	private final int rarety;
 
 	public Enchantment(int rarety, EnchantmentType[] types) {
 		this.types = types;
@@ -54,7 +54,11 @@ public abstract class Enchantment {
 		AxeEnchantment,
 		HoeEnchantment,
 		SwordEnchantment, 
-		ArmorEnchantment, 
+		ArmorEnchantment,
+		HelmetEnchantment,
+		ChestplatEnchantment,
+		LeggingsEnchantment,
+		BootsEnchantment,
 		ElytraEnchantment,
 		FishingEnchantment, 
 		BowEnchantment, 

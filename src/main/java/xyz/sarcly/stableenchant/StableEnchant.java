@@ -6,8 +6,6 @@ import org.slf4j.LoggerFactory;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry;
-import net.fabricmc.fabric.api.event.registry.FabricRegistryBuilder;
-import net.fabricmc.fabric.api.event.registry.RegistryAttribute;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
@@ -25,7 +23,6 @@ import net.minecraft.util.registry.Registry;
 import xyz.sarcly.stableenchant.block.EnchantingTableBlock;
 import xyz.sarcly.stableenchant.block.entity.EnchantingTableBlockEntity;
 import xyz.sarcly.stableenchant.client.render.block.entity.EnchantingTableBlockEntityRenderer;
-import xyz.sarcly.stableenchant.enchantment.Enchantment;
 import xyz.sarcly.stableenchant.item.EnchantingBookItem;
 import xyz.sarcly.stableenchant.screen.EnchantingTableScreen;
 import xyz.sarcly.stableenchant.screen.handler.EnchantingTableScreenHandler;
@@ -49,9 +46,6 @@ public class StableEnchant implements ModInitializer, ClientModInitializer {
 	
 	//ScreenHandler
 	public static final ScreenHandlerType<EnchantingTableScreenHandler> ENCHANTING_TABLE_SCREEN_HANDLER = new ExtendedScreenHandlerType<EnchantingTableScreenHandler>(EnchantingTableScreenHandler::new);
-	
-	//Enchantment Registry
-	public static final Registry<Enchantment> STABLE_ENCHANTMENT = FabricRegistryBuilder.createSimple(Enchantment.class, new Identifier(MODID, "stable_enchantments")).attribute(RegistryAttribute.MODDED).buildAndRegister();
 	
 	@Override
 	public void onInitialize() {

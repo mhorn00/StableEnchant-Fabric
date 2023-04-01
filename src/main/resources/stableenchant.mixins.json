@@ -4,17 +4,9 @@
   "package": "xyz.sarcly.stableenchant.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+	"EnchantmentsMixin"
   ],
   "client": [
-    "EnchantmentHelperMixin",
-	"AxeItemMixin",
-	"BowItemMixin",
-	"CrossbowItemMixin",
-	"MiningToolItemMixin",
-	"RangedWeaponItemMixin",
-	"SwordItemMixin",
-	"ToolItemMixin",
-	"TridentItemMixin"
   ],
   "injectors": {
     "defaultRequire": 1

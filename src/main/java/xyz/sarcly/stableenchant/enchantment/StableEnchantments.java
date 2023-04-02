@@ -2,6 +2,7 @@ package xyz.sarcly.stableenchant.enchantment;
 
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class StableEnchantments { //TODO: equip slots
@@ -46,7 +47,12 @@ public class StableEnchantments { //TODO: equip slots
 	public static final StableEnchantment UNBREAKING = StableEnchantments.register("unbreaking", new UnbreakingEnchantment(0, 0, ALL_ARMOR));
 	public static final StableEnchantment VANISHING_CURSE = StableEnchantments.register("vanishing_curse", new VanishingCurseEnchantment(0, 0, ALL_ARMOR));
 	
-	private static StableEnchantment register(String name, Enchantment enchantment) {
+	private static StableEnchantment register(String name, Enchantment enchantment) {;
 		return (StableEnchantment)Registry.register(Registry.ENCHANTMENT, name, enchantment);
+	}
+	//TODO: make a sperate registry for enchant stuff so it actually appears under my mod?
+	
+	public static StableEnchantment getById(String name) {
+		return (StableEnchantment)Registry.ENCHANTMENT.get(Identifier.tryParse(name));
 	}
 }

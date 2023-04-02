@@ -10,6 +10,11 @@ public class BaneOfArthropodsEnchantment extends StableEnchantment {
 	}
 	
 	@Override
+	public boolean isCursed() {
+		return true;
+	}
+	
+	@Override
 	public int getMaxLevel() {
 		return 5;
 	}

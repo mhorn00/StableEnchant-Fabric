@@ -14,6 +14,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.Material;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
+import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -61,6 +62,7 @@ public class StableEnchant implements ModInitializer, ClientModInitializer {
 		//BlockItems
 		Registry.register(Registry.ITEM, new Identifier(MODID, "enchanting_table"), ENCHANTING_TABLE_BLOCK_ITEM);
 		
+		//ScreenHandler
 		Registry.register(Registry.SCREEN_HANDLER, new Identifier(MODID, "enchanting_table_screen_handler"), ENCHANTING_TABLE_SCREEN_HANDLER);
 	}
 

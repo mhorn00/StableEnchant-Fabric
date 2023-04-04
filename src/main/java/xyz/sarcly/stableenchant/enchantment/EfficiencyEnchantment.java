@@ -13,7 +13,7 @@ public class EfficiencyEnchantment extends StableEnchantment {
 	
 	@Override
 	public int getMaxLevel() {
-		return 10;
+		return 5;
 	}
 
     @Override

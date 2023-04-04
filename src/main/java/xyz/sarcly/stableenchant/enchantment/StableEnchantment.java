@@ -26,6 +26,7 @@ public class StableEnchantment extends Enchantment {
 	public final EnchantmentTarget type;
 	@Nullable protected String translationKey;
 
+	//TODO: replace w/e uses Rarity enum
 	protected StableEnchantment(int rarity, int stability, EnchantmentTarget type, EquipmentSlot[] slotTypes) {
 		super(Rarity.COMMON, type, slotTypes); // not using this ctor
 		this.enchantRarity = rarity;

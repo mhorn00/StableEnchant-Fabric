@@ -14,7 +14,6 @@ import net.minecraft.block.Block;
 import net.minecraft.block.Material;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
-import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -47,6 +46,7 @@ public class StableEnchant implements ModInitializer, ClientModInitializer {
 	
 	//ScreenHandler
 	public static final ScreenHandlerType<EnchantingTableScreenHandler> ENCHANTING_TABLE_SCREEN_HANDLER = new ExtendedScreenHandlerType<EnchantingTableScreenHandler>(EnchantingTableScreenHandler::new);
+
 	
 	@Override
 	public void onInitialize() {

@@ -1,5 +1,5 @@
 package xyz.sarcly.stableenchant.enchantment;
 
-public class EnchantmentHelper {
+public class StableEnchantmentHelper {
 	
 }

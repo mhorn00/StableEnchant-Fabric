@@ -47,8 +47,8 @@ public class EnchantingTableBlock extends Block implements BlockEntityProvider {
 		//Server Side
 		EnchantingTableBlockEntity blockEnt = (EnchantingTableBlockEntity)world.getBlockEntity(pos);
 		Inventory blockEntInv = (Inventory) blockEnt;
-		if (player.getStackInHand(hand).isEmpty()) { //if players hand is empty
-			if (player.isSneaking() && !blockEnt.getStack(0).isEmpty() && blockEnt.getStack(0).isOf(StableEnchant.ENCHANTING_BOOK)) {
+		if (player.getStackInHand(hand).isEmpty() && player.isSneaking() && !blockEnt.getStack(0).isEmpty() && blockEnt.getStack(0).isOf(StableEnchant.ENCHANTING_BOOK)) { //if players hand is empty
+			if (blockEnt.getStack(0).getNbt() == null || (blockEnt.getStack(0).getNbt().contains("Owner") && blockEnt.getStack(0).getNbt().getUuid("Owner").equals(player.getUuid()))) {
 				//if the player is sneaking and the table has a book in it
 				player.setStackInHand(hand, blockEntInv.getStack(0).copy()); 
 				blockEntInv.setStack(0, ItemStack.EMPTY); //remove the book from the table and give it to the player
@@ -68,7 +68,7 @@ public class EnchantingTableBlock extends Block implements BlockEntityProvider {
 				return ActionResult.SUCCESS; //return so we dont open the UI when putting the book in
 			}	
 		}
-		if (!player.getStackInHand(hand).isOf(StableEnchant.ENCHANTING_BOOK)) {
+		if (!player.getStackInHand(hand).isOf(StableEnchant.ENCHANTING_BOOK) && blockEnt.getStack(0).isOf(StableEnchant.ENCHANTING_BOOK)) {
 			NamedScreenHandlerFactory shf = createScreenHandlerFactory(state, world, pos);
 			if (shf != null) {
 				player.openHandledScreen(shf);
